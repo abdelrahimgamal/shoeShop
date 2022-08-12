@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="shoe"
+            type="com.example.shoestore_starter.model.Shoe" />
+
+    </data>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.addshoe.AddShoeFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="#D6E3FF"
+                app:cardCornerRadius="200dp">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/nike1" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                style="@style/header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/shoe_name" />
+
+            <EditText
+                android:text="@={shoe.name}"
+                android:id="@+id/shoe_name"
+                style="@style/description_text"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/company" />
+
+            <EditText
+                android:text="@={shoe.company}"
+                android:id="@+id/company"
+                style="@style/description_text"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/shoe_size" />
+
+            <EditText
+                android:text="@={shoe.size}"
+                android:id="@+id/shoe_size"
+                style="@style/description_text"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/descriptionn" />
+
+            <EditText
+                android:text="@={shoe.description}"
+                android:id="@+id/description"
+                style="@style/description_text"
+                android:layout_width="match_parent"
+                android:lines="3"
+                android:inputType="text"
+                android:height="60dp"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="@string/save"
+                    style="@style/rounded_button_style"
+                    android:id="@+id/save_button"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="@string/discard"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/blue"
+                    style="@style/rounded_button_style"
+                    android:id="@+id/discard_button"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</layout>
